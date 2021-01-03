@@ -1,0 +1,247 @@
+/*GENERELT - MOBILE-FIRST*/
+img {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #292929;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Overpass', sans-serif;
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+h2 {
+    font-family: 'Overpass', sans-serif;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 14vh;
+    padding-bottom: 3vh;
+}
+
+p {
+    color: #e5e5e5;
+    font-size: 1.1rem;
+}
+
+
+
+
+
+
+
+
+
+
+/*SEKTION 1*/
+#section_1 .pic1 {
+    background-image: url(billeder/mono.jpg);
+    background-size: cover;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: 0 40%;
+}
+
+
+
+
+
+
+
+
+
+
+/*SEKTION 2*/
+#section_2 .pic2 {
+    background-image: url(billeder/wear_share.jpg);
+    background-size: cover;
+    grid-row: 1/4;
+}
+
+#section_2 .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px;
+}
+
+#section_2 .txt1,
+#section_2 .txt2,
+#section_2 .txt3 {
+    grid-column: 2/3;
+    padding-left: 20px;
+}
+
+#section_2 .txt1 p {
+    margin-top: 0;
+}
+
+
+
+
+
+
+
+
+
+/*SEKTION 3*/
+#section_3 .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 20px;
+}
+
+#section_3 .txt p {
+    text-align: right;
+    margin-top: 0;
+}
+
+#section_3 .pic3 {
+    background-image: url(billeder/mono_theconcept.jpg);
+    background-size: cover;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+/*SEKTION 4*/
+#section_4 .txt {
+    text-align: center;
+    margin: auto;
+    width: 320px;
+}
+
+#section_4 .pic_wrapper {
+    padding-top: 3vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#section_4 .left_column {
+    background-image: url(billeder/wear_share.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 390px;
+}
+
+#section_4 .right_column {
+    background-image: url(billeder/mono_produkt.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 390px;
+}
+
+#section_4 .mid_column {
+    margin: 20px;
+    display: grid;
+    gap: 20px;
+}
+
+#section_4 .mid1 {
+    background-image: url(billeder/mono_forside.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 330px;
+}
+
+#section_4 .mid2 {
+    background-image: url(billeder/mono_about.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 420px;
+}
+
+#section_4 .mid3 {
+    background-image: url(billeder/mono_theconcept.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 420px;
+}
+
+#section_4 .mid4 {
+    background-image: url(billeder/mono_favourites.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 330px;
+}
+
+#section_4 .mid5 {
+    background-image: url(billeder/mono_cart.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 330px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
