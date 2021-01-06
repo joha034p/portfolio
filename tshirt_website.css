@@ -19,7 +19,9 @@ h1 {
     font-size: 2.5rem;
     color: white;
     text-align: center;
-    margin: 0;
+    margin: 30px 50px;
+    border-style: none none solid;
+    border-width: thin;
 }
 
 h2 {
@@ -31,11 +33,23 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 14vh;
+    padding-top: 10vh;
     padding-bottom: 3vh;
 }
 
+h3 {
+    font-family: 'Overpass', sans-serif;
+    /*    font-size: 2rem;
+    */
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding-top: 6vh;
+    padding-bottom: 2vh;
+}
+
 p {
+    font-family: 'Barlow', sans-serif;
     color: #e5e5e5;
     font-size: 1.1rem;
 }
@@ -53,7 +67,7 @@ p {
 #section_1 .pic1 {
     background-image: url(billeder/mono.jpg);
     background-size: cover;
-    height: 20vh;
+    height: 28vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,26 +84,22 @@ p {
 
 
 /*SEKTION 2*/
-#section_2 .pic2 {
-    background-image: url(billeder/wear_share.jpg);
-    background-size: cover;
-    grid-row: 1/4;
-}
-
 #section_2 .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 20px;
+    margin: 0 20px 20px 20px;
 }
 
-#section_2 .txt1,
-#section_2 .txt2,
-#section_2 .txt3 {
-    grid-column: 2/3;
-    padding-left: 20px;
+#section_2 .pic2 {
+    width: 80%;
+    margin: auto;
 }
 
-#section_2 .txt1 p {
+#section_2 .texter {
+    margin: 0 50px;
+}
+
+#section_2 .txt1 p,
+#section_2 .txt2 p,
+#section_2 .txt3 p {
     margin-top: 0;
 }
 
@@ -103,22 +113,23 @@ p {
 
 /*SEKTION 3*/
 #section_3 .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin: 20px;
+    margin: 0 20px 20px 20px;
+}
+
+#section_3 .texter {
+    margin: 0 50px;
 }
 
 #section_3 .txt p {
-    text-align: right;
     margin-top: 0;
 }
 
 #section_3 .pic3 {
-    background-image: url(billeder/mono_theconcept.jpg);
-    background-size: cover;
-    height: 100%;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 3vh;
 }
+
 
 
 
@@ -129,10 +140,8 @@ p {
 
 
 /*SEKTION 4*/
-#section_4 .txt {
-    text-align: center;
-    margin: auto;
-    width: 320px;
+#section_4 .txt p {
+    margin: 0 70px;
 }
 
 #section_4 .pic_wrapper {
@@ -140,23 +149,21 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    margin: 20px;
-    justify-content: center;
-    align-items: center;
+    margin: 0 20px;
 }
 
 #section_4 .left_column {
     background-image: url(billeder/wear_share.jpg);
     background-size: cover;
     width: 100%;
-    height: 390px;
+    height: 368px;
 }
 
 #section_4 .right_column {
     background-image: url(billeder/mono_produkt.jpg);
     background-size: cover;
     width: 100%;
-    height: 390px;
+    height: 368px;
 }
 
 #section_4 .mid_column {
@@ -166,38 +173,28 @@ p {
 }
 
 #section_4 .mid1 {
-    background-image: url(billeder/mono_forside.jpg);
-    background-size: cover;
     width: 100%;
-    height: 330px;
+    height: auto;
 }
 
 #section_4 .mid2 {
-    background-image: url(billeder/mono_about.jpg);
-    background-size: cover;
     width: 100%;
-    height: 420px;
+    height: auto;
 }
 
 #section_4 .mid3 {
-    background-image: url(billeder/mono_theconcept.jpg);
-    background-size: cover;
     width: 100%;
-    height: 420px;
+    height: auto;
 }
 
 #section_4 .mid4 {
-    background-image: url(billeder/mono_favourites.jpg);
-    background-size: cover;
     width: 100%;
-    height: 330px;
+    height: auto;
 }
 
 #section_4 .mid5 {
-    background-image: url(billeder/mono_cart.jpg);
-    background-size: cover;
     width: 100%;
-    height: 330px;
+    height: auto;
 }
 
 
@@ -211,6 +208,154 @@ p {
 
 
 
+/*BURGER MENU*/
+.hidden {
+    display: none;
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+#menuknap {
+    display: inline-block;
+    cursor: pointer;
+    position: fixed;
+    color: black;
+    font-size: 4rem;
+    color: white;
+}
+
+#menu {
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+    list-style-type: none;
+    transition: transform .3s;
+    transform-origin: top left;
+}
+
+nav {
+    background-color: #e5e5e5;
+    ;
+    display: block;
+    overflow: auto;
+    height: auto;
+    width: 55vw;
+    position: fixed;
+}
+
+nav a {
+    display: block;
+    color: #292929;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    width: auto;
+}
+
+nav a:hover {
+    background-color: #292929;
+    color: white;
+}
+
+ul li:first-child {
+    margin-top: 65px;
+}
+
+ul li:nth-child(5) {
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 600px) {
+    #section_1 {
+        padding-top: 59px;
+    }
+
+    nav {
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 59px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    #menuknap {
+        display: none;
+    }
+
+    #menu.hidden {
+        display: flex;
+        transform: translateX(0);
+        opacity: 1;
+        margin: 0;
+        padding: 0;
+    }
+
+    #menu li {
+        display: inline-block;
+    }
+
+    ul li:first-child {
+        margin-top: 0;
+    }
+
+    ul li:nth-child(5) {
+        margin-bottom: 0;
+    }
+
+
+
+    @media (min-width: 683px) {
+        nav a {
+            font-size: 1.2rem;
+        }
+
+        #section_2 .pic2 {
+            grid-row: 1/4;
+        }
+
+        #section_2 .wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        #section_2 .txt1,
+        #section_2 .txt2,
+        #section_2 .txt3 {
+            padding-left: 20px;
+            grid-column: 2/3;
+        }
+
+
+        #section_3 .wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        #section_3 .txt p {
+            text-align: right;
+        }
+    }
 
 
 
@@ -230,18 +375,4 @@ p {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**/
+    /**/

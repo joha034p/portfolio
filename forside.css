@@ -22,6 +22,12 @@ h1 {
     margin: 7px;
 }
 
+p {
+    font-family: 'Barlow', sans-serif;
+    color: #e5e5e5;
+    font-size: 1.1rem;
+}
+
 #section_1 {
     display: grid;
     grid-template-columns: 1fr 1fr;

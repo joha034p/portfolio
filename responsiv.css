@@ -1,0 +1,346 @@
+/*GENERELT - MOBILE-FIRST*/
+img {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eae4da;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Overpass', sans-serif;
+    font-size: 2.5rem;
+    color: #2c2c2c;
+    margin: 30px;
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+    font-family: 'Overpass', sans-serif;
+    font-size: 2rem;
+    color: #2c2c2c;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10vh;
+    padding-bottom: 3vh;
+}
+
+h3 {
+    font-family: 'Overpass', sans-serif;
+    color: #2c2c2c;
+    text-align: center;
+    margin: 0;
+    padding-top: 6vh;
+    padding-bottom: 2vh;
+}
+
+p {
+    font-family: 'Barlow', sans-serif;
+    color: #2c2c2c;
+    font-size: 1.1rem;
+}
+
+
+
+
+
+
+
+
+
+/*SEKTION 1 */
+#section_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#section_1 .pic1 {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*SEKTION 2*/
+#section_2 .wrapper {
+    margin: 0 20px 20px 20px;
+}
+
+#section_2 .pic2 {
+    width: 80%;
+    margin: auto;
+}
+
+#section_2 .texter {
+    margin: 0 50px;
+}
+
+#section_2 .txt1 p,
+#section_2 .txt2 p,
+#section_2 .txt3 p {
+    margin-top: 0;
+}
+
+
+
+
+
+
+
+
+
+/*SEKTION 3*/
+#section_3 .wrapper {
+    margin: 0 20px 20px 20px;
+}
+
+#section_3 .texter {
+    margin: 0 50px;
+}
+
+#section_3 .txt p {
+    margin-top: 0;
+}
+
+#section_3 .pic3 {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 3vh;
+}
+
+
+
+
+
+
+
+
+
+
+/*SEKTION 4*/
+#section_4 .txt p {
+    margin: 0 70px;
+}
+
+#section_4 .mid_column {
+    margin: 20px;
+    display: grid;
+    gap: 8px;
+    background-color: #292929;
+}
+
+#section_4 .mid1,
+#section_4 .mid2,
+#section_4 .mid3,
+#section_4 .mid4,
+#section_4 .mid5 {
+    width: 95%;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*BURGER MENU*/
+.hidden {
+    display: none;
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+#menuknap {
+    display: inline-block;
+    cursor: pointer;
+    position: fixed;
+    color: black;
+    font-size: 4rem;
+}
+
+#menu {
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+    list-style-type: none;
+    transition: transform .3s;
+    transform-origin: top left;
+}
+
+nav {
+    background-color: rgb(36, 36, 36);
+    ;
+    display: block;
+    overflow: auto;
+    height: auto;
+    width: 55vw;
+    position: fixed;
+}
+
+nav a {
+    display: block;
+    color: #eae4da;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    width: auto;
+}
+
+nav a:hover {
+    background-color: #eae4da;
+    color: black;
+}
+
+ul li:first-child {
+    margin-top: 65px;
+}
+
+ul li:nth-child(5) {
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 600px) {
+    #section_1 {
+        padding-top: 59px;
+    }
+
+    nav {
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 59px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    #menuknap {
+        display: none;
+    }
+
+    #menu.hidden {
+        display: flex;
+        transform: translateX(0);
+        opacity: 1;
+        margin: 0;
+        padding: 0;
+    }
+
+    #menu li {
+        display: inline-block;
+    }
+
+    ul li:first-child {
+        margin-top: 0;
+    }
+
+    ul li:nth-child(5) {
+        margin-bottom: 0;
+    }
+
+
+
+    @media (min-width: 683px) {
+        nav a {
+            font-size: 1.2rem;
+        }
+
+        #section_2 .pic2 {
+            grid-row: 1/4;
+        }
+
+        #section_2 .wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        #section_2 .txt1,
+        #section_2 .txt2,
+        #section_2 .txt3 {
+            padding-left: 20px;
+            grid-column: 2/3;
+        }
+
+
+        #section_3 .wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        #section_3 .txt p {
+            text-align: right;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /**/
