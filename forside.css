@@ -9,9 +9,47 @@ img {
 }
 
 body {
-    /*    background-color: #292929;*/
     padding: 0;
     margin: 0;
+}
+
+header {
+    background-color: #151515;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    font-family: 'Overpass', sans-serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #D6D6D6;
+    margin: auto;
+}
+
+nav a:nth-child(2) {
+    padding-left: 25vw;
+}
+
+nav a:visited {
+    text-decoration: none;
+}
+
+#menu {
+    display: flex;
+    width: 100px;
+    margin: auto;
+}
+
+#menu .logopic {
+    background-image: url(billeder/logo.png);
+    background-size: cover;
+    width: 100px;
+    height: 56px;
 }
 
 h1 {
@@ -54,14 +92,6 @@ p {
     opacity: 80%;
 }
 
-a:link {
-    text-decoration: none;
-}
-
-a:visited {
-    text-decoration: none;
-}
-
 
 
 
@@ -82,7 +112,6 @@ a:visited {
     width: 50vw;
     height: 50vh;
     filter: grayscale(100%);
-    /*     blur(2px)*/
 }
 
 #pic1 {
@@ -120,6 +149,81 @@ a:visited {
 
 
 
+/*MEDIA QUERIES*/
+@media (min-width: 1200px) {
+    #logo {
+        width: 7%;
+    }
+
+    body {
+        background-color: #000000;
+    }
+
+    #emne_1,
+    #emne_2,
+    #emne_3,
+    #emne_4 {
+        width: 25vw;
+        height: 100%;
+        transition: 1s;
+    }
+
+    #emne_1:hover {
+        background-color: #ff4141;
+    }
+
+    #emne_2:hover {
+        background-color: #ffd76a;
+    }
+
+    #emne_3:hover {
+        background-color: #413b8e;
+    }
+
+    #emne_4:hover {
+        background-color: #9b593b;
+    }
+
+    #pic1,
+    #pic2,
+    #pic3,
+    #pic4 {
+        width: 25vw;
+        height: 100vh;
+        opacity: 70%;
+    }
+
+    #video1 {
+        background-size: contain;
+        z-index: 100;
+        position: relative;
+    }
+
+    #section_1 {
+        display: flex;
+    }
+
+    .txt {
+        opacity: 70%;
+    }
+
+    /*
+    #emne_1 .txt {
+        bottom: 700px;
+    }
+
+    #emne_2 .txt {
+        bottom: 550px;
+    }
+
+    #emne_3 .txt {
+        bottom: 400px;
+    }
+
+    #emne_4 .txt {
+        bottom: 250px;
+    }
+*/
 
 
 
@@ -127,4 +231,12 @@ a:visited {
 
 
 
-/**/
+
+
+
+
+
+
+
+
+    /**/

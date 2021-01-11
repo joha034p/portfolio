@@ -22,6 +22,7 @@ h1 {
     margin: 30px 50px;
     border-style: none none solid;
     border-width: thin;
+    padding-top: 50px;
 }
 
 h2 {
@@ -145,7 +146,7 @@ p {
 }
 
 #section_4 .pic_wrapper {
-    padding-top: 3vh;
+    padding-top: 7vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -172,26 +173,10 @@ p {
     gap: 20px;
 }
 
-#section_4 .mid1 {
-    width: 100%;
-    height: auto;
-}
-
-#section_4 .mid2 {
-    width: 100%;
-    height: auto;
-}
-
-#section_4 .mid3 {
-    width: 100%;
-    height: auto;
-}
-
-#section_4 .mid4 {
-    width: 100%;
-    height: auto;
-}
-
+#section_4 .mid1,
+#section_4 .mid2,
+#section_4 .mid3,
+#section_4 .mid4,
 #section_4 .mid5 {
     width: 100%;
     height: auto;
@@ -237,7 +222,6 @@ p {
 
 nav {
     background-color: #e5e5e5;
-    ;
     display: block;
     overflow: auto;
     height: auto;
@@ -255,9 +239,9 @@ nav a {
     width: auto;
 }
 
-nav a:hover {
+nav li a:hover {
     background-color: #292929;
-    color: white;
+    color: #e5e5e5;
 }
 
 ul li:first-child {
@@ -268,6 +252,17 @@ ul li:nth-child(5) {
     margin-bottom: 30px;
 }
 
+#logo {
+    display: flex;
+    justify-content: center;
+}
+
+#logo .logopic {
+    background-image: url(billeder/logo_sort.png);
+    background-size: cover;
+    width: 90px;
+    height: 51px;
+}
 
 
 
@@ -279,6 +274,11 @@ ul li:nth-child(5) {
 
 
 
+
+
+
+
+/*MEDIA QUERIES*/
 @media (min-width: 600px) {
     #section_1 {
         padding-top: 59px;
@@ -322,6 +322,22 @@ ul li:nth-child(5) {
         margin-bottom: 0;
     }
 
+    #logo .logopic {
+        background-image: url(billeder/logo_sort.png);
+        background-size: cover;
+        width: 90px;
+        height: 51px;
+        position: fixed;
+        top: 3px;
+        left: -44px;
+    }
+
+
+
+
+
+
+
 
 
     @media (min-width: 683px) {
@@ -329,36 +345,116 @@ ul li:nth-child(5) {
             font-size: 1.2rem;
         }
 
-        #section_2 .pic2 {
-            grid-row: 1/4;
+        #section_4 .txt p {
+            text-align: center;
+        }
+    }
+
+
+
+
+
+
+    @media (min-width: 800px) {
+        h1 {
+            margin: 30px 240px;
         }
 
-        #section_2 .wrapper {
+        h2 {
+            padding-top: 18vh;
+        }
+
+        h3 {
+            text-align: left;
+        }
+
+        #section_2 .texter {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        #section_2 .pic2 {
+            width: 65%;
         }
 
         #section_2 .txt1,
         #section_2 .txt2,
         #section_2 .txt3 {
-            padding-left: 20px;
-            grid-column: 2/3;
+            padding: 20px;
         }
 
 
         #section_3 .wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+        }
+
+        #section_3 .pic3 {
+            width: 100%;
+            height: 100%;
         }
 
         #section_3 .txt p {
-            text-align: right;
+            text-align: left;
+        }
+
+        #section_4 {
+            margin: 70px;
+        }
+
+        #section_4 .txt p {
+            text-align: center;
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+
+        #section_4 .mid_column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        #section_4 .mid_column .mid5 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 
 
 
+
+
+
+
+    @media (min-width: 1300px) {
+        #section_1 .pic1 {
+            height: 40vh;
+        }
+
+        #section_2 .pic2 {
+            width: 45%;
+        }
+
+        #section_3 .wrapper {
+            margin: 0 150px 20px;
+        }
+
+        #section_4 {
+            margin: 200px;
+        }
+
+        #section_4 .pic_wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #section_4 .left_column,
+        #section_4 .right_column {
+            width: 50%;
+            height: 660px;
+        }
+    }
 
 
 
