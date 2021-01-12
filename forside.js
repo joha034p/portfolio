@@ -1,25 +1,64 @@
+//Event Listeners
 window.addEventListener("load", sidenVises);
 
+//Scroll-knappen
+window.addEventListener("scroll", scrollFunction);
+document.querySelector("#top_knap").addEventListener("click", topFunction);
+
+//Burgermenu knap
+document.querySelector("#menuknap").addEventListener("click", toggleMenu);
+
+
+
+
+
+
+
+
+
+//Variabler
+let top_knap = document.querySelector("#top_knap");
+
+
+
+
+
+
+
+
+
+//Functions
 function sidenVises() {
-    console.log("sidenVises");
+    console.log(sidenVises);
 }
 
-let pic1 = document.querySelector("#pic1");
+//Scroll-tilbage-til-toppen KNAPPEN
+function scrollFunction() {
+    console.log(scrollFunction);
 
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        top_knap.style.display = "block";
+    } else {
+        top_knap.style.display = "none";
+    }
+}
 
-document.querySelector("#emne_1").addEventListener("mouseenter", videoPlay);
-
-document.querySelector("#emne_1").addEventListener("mouseleave", videoPause);
-
-
-function videoPlay() {
-    console.log("videoPlay");
-    pic1.play;
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 
 
+//Burgermenu der folder sig ud til en "normal" menu
+function toggleMenu() {
+    console.log("toggleMenu");
+    document.querySelector("#menu").classList.toggle("hidden");
 
-function videoPause() {
-    console.log("videoPause");
-    pic1.pause;
+    let erSkjult = document.querySelector("#menu").classList.contains("hidden");
+
+    if (erSkjult == true) {
+        document.querySelector("#menuknap").textContent = "☰";
+    } else {
+        document.querySelector("#menuknap").textContent = "✕";
+    }
 }

@@ -18,7 +18,6 @@ document.querySelector("#menuknap").addEventListener("click", toggleMenu);
 
 //Variabler
 let top_knap = document.querySelector("#top_knap");
-let erSkjult = document.querySelector("#menu").classList.contains("hidden");
 
 
 
@@ -54,6 +53,8 @@ function topFunction() {
 function toggleMenu() {
     console.log("toggleMenu");
     document.querySelector("#menu").classList.toggle("hidden");
+
+    let erSkjult = document.querySelector("#menu").classList.contains("hidden");
 
     if (erSkjult == true) {
         document.querySelector("#menuknap").textContent = "☰";
